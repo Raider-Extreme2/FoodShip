@@ -7,5 +7,7 @@ public class Quit : MonoBehaviour
     public void QuitGame() 
     {
         Application.Quit();
+
+        //comentario para teste
     }
 }
