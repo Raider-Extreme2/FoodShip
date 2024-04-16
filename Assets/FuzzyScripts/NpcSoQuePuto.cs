@@ -22,6 +22,7 @@ public class NpcSoQuePuto : StateMachineBehaviour
             animator.SetBool("PedidoEntregue", true);
         }
         tempoDeEspera += Time.deltaTime;
+        NpcController.timer.text = tempoDeEspera.ToString("F0");
         if (tempoDeEspera >= 10)
         {
             animator.SetBool("DesistirDoPedido", true);

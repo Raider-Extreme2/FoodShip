@@ -11,6 +11,7 @@ public class NpcController : MonoBehaviour
     public int index;
     [SerializeField] Vector3 target;
     public TextMeshProUGUI estadoAtual;
+    public TextMeshProUGUI timer;
 
     public int estados;
 

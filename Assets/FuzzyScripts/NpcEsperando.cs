@@ -23,6 +23,7 @@ public class NpcEsperando : StateMachineBehaviour
             NpcController.index = 3;
         }
         tempoDeEspera += Time.deltaTime;
+        NpcController.timer.text = tempoDeEspera.ToString("F0");
         if (tempoDeEspera >= 10)
         {
             animator.SetBool("Demorando", true);
