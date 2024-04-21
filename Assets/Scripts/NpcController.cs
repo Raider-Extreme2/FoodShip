@@ -6,20 +6,44 @@ using TMPro;
 
 public class NpcController : MonoBehaviour
 {
+    [Header("Variables")]
     public NavMeshAgent agent;
     public Transform[] waypoints;
     public int index;
     [SerializeField] Vector3 target;
     public TextMeshProUGUI estadoAtual;
     public TextMeshProUGUI timer;
-
     public int estados;
+
+    [Header("Order")]
+    public string[] itemPedido;
+    //public string itemPedido2;
+    //public string itemPedido3;
+
+    [Header("Verifier")]
+    public GameObject playerGameObject;
+    PickUpObject pickUpObject;
+    public bool itemEntrege1;
+    public bool itemEntrege2;
+    public bool itemEntrege3;
+
+
 
     void Update()
     {
+        pickUpObject = playerGameObject.GetComponentInChildren<PickUpObject>();
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             estados++;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            OrderSelector();
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            VerificarObjetoIgual();
         }
     }
 
@@ -36,5 +60,81 @@ public class NpcController : MonoBehaviour
         {
             index = 0;
         }
+    }
+
+    public void OrderSelector() 
+    {
+        //tamanho de pedido aleatorio
+        int tamanhoPedido = Random.Range(1, 4);
+        Debug.Log("tamanho do pedido " + tamanhoPedido);
+        itemPedido = new string[tamanhoPedido];
+        
+        for (int i = 0; i < itemPedido.Length; i++)
+        {
+            //item aleatorio a ser pedido
+            int randomNumber = Random.Range(0, 3);
+            //lista de itens de acordo com numero aleatorio
+            if (randomNumber == 0)
+            {
+                itemPedido[i] = "Cozido";
+                Debug.Log("item " + (i+1) + " " + itemPedido[i]);
+            }
+            if (randomNumber == 1)
+            {
+                itemPedido[i] = "Salada";
+                Debug.Log("item " + (i+1) + " " + itemPedido[i]);
+            }
+            if (randomNumber == 2)
+            {
+                itemPedido[i] = "Bebida";
+                Debug.Log("item " + (i+1) + " " + itemPedido[i]);
+            }
+        }
+    }
+
+    public void VerificarObjetoIgual()
+    {
+        for (int i = 0; i < itemPedido.Length; i++)
+        {
+            if (itemPedido.Length >= 1)
+            {
+                if (pickUpObject.itemSegurado.name == itemPedido[0])
+                {
+                    itemEntrege1 = true;
+                    Debug.Log("item 1 foi entregue com sucesso ITEM ENTREGE: " + itemPedido[0]);
+                }
+            }
+            else
+            {
+                break;
+            }
+
+            if (itemPedido.Length >= 2)
+            {
+                if (pickUpObject.itemSegurado.name == itemPedido[1])
+                {
+                    itemEntrege2 = true;
+                    Debug.Log("item 2 foi entregue com sucessoITEM ENTREGE: " + itemPedido[1]);
+                }
+            }
+            else
+            {
+                break;
+            }
+
+            if (itemPedido.Length == 3)
+            {
+                if (pickUpObject.itemSegurado.name == itemPedido[2])
+                {
+                    itemEntrege3 = true;
+                    Debug.Log("item 3 foi entregue com sucessoITEM ENTREGE: " + itemPedido[2]);
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+
     }
 }

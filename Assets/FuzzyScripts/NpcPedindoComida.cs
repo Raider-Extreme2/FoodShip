@@ -11,6 +11,7 @@ public class NpcPedindoComida : StateMachineBehaviour
     {
         NpcController = animator.GetComponent<NpcController>();
         NpcController.estadoAtual.text = "Pedindo Comida";
+        NpcController.OrderSelector();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

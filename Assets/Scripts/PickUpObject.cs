@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    PlayerController playerController;
     [SerializeField] GameObject player;
-    [SerializeField] GameObject item;
+    public GameObject itemSegurado;
     [SerializeField] Rigidbody itemRB;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (item.transform.parent != null)
+            //se tiver um pai
+            if (itemSegurado.transform.parent != null)
             {
-                //item.transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, player.transform.position.z +3).normalized;
-                item.transform.SetParent(null);
-                //item.transform.rotation = Quaternion.identity;
+                // desliga o parentesco
+                itemSegurado.transform.SetParent(null);
                 itemRB.isKinematic = false;
             }
         }
@@ -25,12 +24,17 @@ public class PickUpObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        itemSegurado = transform.gameObject;
         if (collision.collider.tag == "Player")
         {
+            //coleta o item e coloca como filho do player
             itemRB.isKinematic = true;
-            item.transform.position = new Vector3(0,2,0);
-            item.transform.rotation = Quaternion.identity;
-            item.transform.SetParent(collision.collider.transform, false);
+            //vector 3 baseado na posição de objeto do player
+            itemSegurado.transform.position = new Vector3(0,2,0);
+            //quaternion baseado na rotação do player
+            itemSegurado.transform.rotation = Quaternion.identity;
+            //objeto segurado não colide com outros objetos
+            itemSegurado.transform.SetParent(collision.collider.transform, false);
             return;
         }
     }
