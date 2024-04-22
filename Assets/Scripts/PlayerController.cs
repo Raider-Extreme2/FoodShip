@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public Slider spdMultiplier;
     public TextMeshProUGUI sliderValue;
 
+    public bool segurandoUmItem;
+
     private void Update()
     {
         sliderValue.text = "SPD multiplier: " + spdMultiplier.value.ToString("F0") + "X";
