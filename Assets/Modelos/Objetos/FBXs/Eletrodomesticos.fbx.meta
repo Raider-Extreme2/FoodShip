@@ -3,7 +3,12 @@ guid: 420cec0e720300745bee3971c61ba8e2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0Bancadas_Forno
+    second: {fileID: 2100000, guid: 693ec768e3815544cbe2bf33aa1856a8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

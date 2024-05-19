@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
 using UnityEngine.UI;
+using Unity.Netcode;
 
 public class NpcController : MonoBehaviour
 {
@@ -32,9 +33,6 @@ public class NpcController : MonoBehaviour
     public bool itemEntrege2;
     public bool itemEntrege3;
     public bool pedidoCompleto;
-
-
-
     void Update()
     {
         pickUpObject = playerGameObject.GetComponentInChildren<PickUpObject>();

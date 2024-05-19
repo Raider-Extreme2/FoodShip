@@ -3,7 +3,12 @@ guid: f420d583a0b0ba649b6f0f5585b354c8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 0 Textura Cozinha
+    second: {fileID: 2100000, guid: 3c96c3b0745a4d74f9e1d11486ecac4e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
