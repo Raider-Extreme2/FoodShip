@@ -25,7 +25,7 @@ public class FoodProcessing : NetworkBehaviour
 
     private void Start()
     {
-        playerScanner = new Ray(transform.position,Vector3.down);
+        playerScanner = new Ray(transform.position, Vector3.down);
         processavel = true;
     }
     private void Update()
@@ -42,68 +42,26 @@ public class FoodProcessing : NetworkBehaviour
         }
 
         Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
-
-        
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ProcessarItem();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            CozinharItem();
-        }
     }
 
-    public void ProcessarItem()
+    public void AtualizarObjetoParaProcessado()
     {
         foiProcessado = true;
-        AtualizarObjetoParaProcessado();
-        //AtualizarItemProcessadoServerRpc();
-    }
-    public void CozinharItem()
-    {
-        foiCozido = true;
-        AtualizarObjetoParaCozido();
-        //AtualizarItemCozidoServerRpc();
-    }
-    public void AtualizarObjetoParaProcessado() 
-    {
         if (processavel && foiProcessado)
         {
             itemBase.gameObject.SetActive(false);
             itemProcessado.gameObject.SetActive(true);
         }
-        
+
     }
     public void AtualizarObjetoParaCozido()
     {
+        foiCozido = true;
         if (cozivel && foiProcessado && foiCozido)
         {
             itemBase.gameObject.SetActive(false);
             itemProcessado.gameObject.SetActive(false);
             itemCozido.gameObject.SetActive(true);
         }
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    void AtualizarItemProcessadoServerRpc() 
-    {
-        AtualizarItemProcessadoClientRpc();
-    }
-    [ServerRpc(RequireOwnership = false)]
-    void AtualizarItemCozidoServerRpc()
-    {
-        AtualizarItemCozidoClientRpc();
-    }
-
-    [ClientRpc]
-    void AtualizarItemProcessadoClientRpc()
-    {
-        AtualizarObjetoParaProcessado();
-    }
-    [ClientRpc]
-    void AtualizarItemCozidoClientRpc()
-    {
-        AtualizarObjetoParaCozido();
     }
 }

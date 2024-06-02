@@ -11,19 +11,16 @@ public class NpcPedindoComida : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NpcController = animator.GetComponent<NpcController>();
-        NpcController.estadoAtual.text = "Pedindo Comida";
-        NpcController.OrderSelector();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //if (NpcController.estados == 2)
-        //{
-        //    animator.SetBool("FoiAtendido", true);
-        //}
-        tempoDeEspera += Time.deltaTime;
-        NpcController.timer.text = tempoDeEspera.ToString("F0");
+        if (NpcController.estados == 2)
+        {
+            animator.SetBool("FoiAtendido", true);
+        }
+        //tempoDeEspera += Time.deltaTime;
         if (tempoDeEspera >= 3)
         {
             animator.SetBool("FoiAtendido", true);

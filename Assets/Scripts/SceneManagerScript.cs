@@ -34,7 +34,7 @@ public class SceneManagerScript : NetworkBehaviour
 
                 networkObject.SpawnAsPlayerObject(id, true);
 
-                playerTransform.transform.position = new Vector3(Random.Range(-3, 3), 1, Random.Range(-3, 3));
+                playerTransform.transform.position = new Vector3(Random.Range(-3, 3), 1, -6f);
             }
         }
     }

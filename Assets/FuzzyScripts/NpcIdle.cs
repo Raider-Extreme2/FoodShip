@@ -11,7 +11,6 @@ public class NpcIdle : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NpcController = animator.GetComponent<NpcController>();
-        NpcController.estadoAtual.text = "3lbI";
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

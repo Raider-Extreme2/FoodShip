@@ -11,18 +11,17 @@ public class NpcSoQuePuto : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NpcController = animator.GetComponent<NpcController>();
-        NpcController.estadoAtual.text = "To Puto";
+        //NpcController.estadoAtual.text = "To Puto";
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (/*NpcController.estados == 4 &&*/ NpcController.pedidoCompleto)
+        if (NpcController.estados == 4)
         {
             animator.SetBool("PedidoEntregue", true);
         }
-        tempoDeEspera += Time.deltaTime;
-        NpcController.timer.text = tempoDeEspera.ToString("F0");
+        //tempoDeEspera += Time.deltaTime;
         if (tempoDeEspera >= 10)
         {
             animator.SetBool("DesistirDoPedido", true);

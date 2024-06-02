@@ -30,10 +30,6 @@ public class PlayerController : NetworkBehaviour
     Transform itemSpawnado;
     public Transform placeToSpawnItem;
 
-    NetworkObject objetoNetwork;
-
-    
-
     private void Update()
     {
         if (!IsOwner)
@@ -44,9 +40,10 @@ public class PlayerController : NetworkBehaviour
         Movment();
         PegarItem();
         AnimationTest();
+        ForceInteraction();
     }
 
-    private void Movment() 
+    private void Movment()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -65,7 +62,7 @@ public class PlayerController : NetworkBehaviour
             {
                 playerAnimator.SetBool("Andando", true);
             }
-            else if(segurandoUmItem)
+            else if (segurandoUmItem)
             {
                 playerAnimator.SetBool("Carregando", true);
             }
@@ -80,9 +77,9 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
-    public void PegarItem() 
+    public void PegarItem()
     {
-        if (Physics.Raycast(playerVision, out RaycastHit hit, maxDistance, interactibleObject,QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(playerVision, out RaycastHit hit, maxDistance, interactibleObject, QueryTriggerInteraction.Collide))
         {
             Debug.Log(hit.collider.gameObject.name + " foi atingido");
             if (hit.collider.gameObject.GetComponent<BoxItemSpawner>().interactible)
@@ -127,7 +124,7 @@ public class PlayerController : NetworkBehaviour
         Debug.DrawRay(transform.position, transform.forward * maxDistance, Color.red);
     }
 
-    void SpawnLocalIngredient(Transform itemPraSpawnar) 
+    void SpawnLocalIngredient(Transform itemPraSpawnar)
     {
         //Instantiate(itemPraSpawnar);
         //objetoNetwork = itemPraSpawnar.GetComponent<NetworkObject>();
@@ -172,7 +169,7 @@ public class PlayerController : NetworkBehaviour
     }
 
 
-    public void AnimationTest() 
+    public void AnimationTest()
     {
         //if (Input.GetKey(KeyCode.Y))
         //{
@@ -198,5 +195,42 @@ public class PlayerController : NetworkBehaviour
         //{
         //    playerAnimator.SetBool("Interagindo", false);
         //}
+    }
+
+    public void ForceInteraction()
+    {
+        if (Input.GetKeyDown(KeyCode.C) && segurandoUmItem)
+        {
+            ProcessarServerRpc();
+        }
+        if (Input.GetKeyDown(KeyCode.B) && segurandoUmItem)
+        {
+            CozinharServerRpc();
+        }
+
+    }
+
+    [ServerRpc]
+    void ProcessarServerRpc()
+    {
+        ProcessarClientRpc();
+    }
+
+    [ClientRpc]
+    void ProcessarClientRpc()
+    {
+        GetComponentInChildren<FoodProcessing>().AtualizarObjetoParaProcessado();
+    }
+
+    [ServerRpc]
+    void CozinharServerRpc()
+    {
+        CozinharClientRpc();
+    }
+
+    [ClientRpc]
+    void CozinharClientRpc()
+    {
+        GetComponentInChildren<FoodProcessing>().AtualizarObjetoParaCozido();
     }
 }

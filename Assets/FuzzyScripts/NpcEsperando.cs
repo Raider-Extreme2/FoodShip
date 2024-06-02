@@ -11,19 +11,18 @@ public class NpcEsperando : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NpcController = animator.GetComponent<NpcController>();
-        NpcController.estadoAtual.text = "Esperando";
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (/*NpcController.estados == 3 &&*/ NpcController.pedidoCompleto)
+        if (NpcController.estados == 3)
         {
             animator.SetBool("PedidoEntregue", true);
             NpcController.index = 3;
         }
         tempoDeEspera += Time.deltaTime;
-        NpcController.timer.text = tempoDeEspera.ToString("F0");
         if (tempoDeEspera >= 10)
         {
             animator.SetBool("Demorando", true);
