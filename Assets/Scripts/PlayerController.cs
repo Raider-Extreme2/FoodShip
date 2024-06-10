@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.Netcode;
+using Unity.VisualScripting;
 
 public class PlayerController : NetworkBehaviour
 {
@@ -18,6 +19,11 @@ public class PlayerController : NetworkBehaviour
     Ray playerVision;
     public float maxDistance;
     public LayerMask interactibleObject;
+    public LayerMask processingStation;
+    public LayerMask tabuaDeCortar;
+    public LayerMask CookPot;
+    public LayerMask lixeira;
+    public LayerMask entregas;
 
     [Header("Animator Variables")]
     [SerializeField] Animator playerAnimator;
@@ -30,6 +36,25 @@ public class PlayerController : NetworkBehaviour
     Transform itemSpawnado;
     public Transform placeToSpawnItem;
 
+    [Header("Interagindo com Cenario")]
+    public bool estaInteragindo;
+
+    [Header("FazedorDePedidos")]
+    public FazedorDePedidos DeusExMachina;
+    public bool podeEntregar;
+
+    [Header("SoundPlayer")]
+    public AudioClip tabua;
+    public AudioClip panela;
+    public AudioClip maquinaDeSuco;
+    public AudioClip lataDeLixo;
+    public AudioSource radio;
+
+    public override void OnNetworkSpawn()
+    {
+        transform.transform.position = new Vector3(Random.Range(-3, 3), 1, -6f);
+        base.OnNetworkSpawn();
+    }
     private void Update()
     {
         if (!IsOwner)
@@ -39,12 +64,15 @@ public class PlayerController : NetworkBehaviour
         playerVision = new Ray(transform.position, transform.forward);
         Movment();
         PegarItem();
-        AnimationTest();
         ForceInteraction();
     }
 
     private void Movment()
     {
+        if (estaInteragindo)
+        {
+            return;
+        }
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -87,31 +115,16 @@ public class PlayerController : NetworkBehaviour
                 Debug.Log("a interação com " + hit.collider.gameObject.name + " é possivel");
                 if (hit.collider.gameObject.name == "CaixaCarneCrua" && Input.GetKeyDown(useKey) && !segurandoUmItem)
                 {
-                    /*itemSpawnado = Instantiate(carneMonstroPrefab);
-                    itemSpawnado.GetComponent<NetworkObject>().Spawn();*/
-
-                    //SpawnLocalIngredient(itemSpawnado);
-
                     segurandoUmItem = true;
                     CarneSpawnerServerRpc();
                 }
                 if (hit.collider.gameObject.name == "CaixaCogumelo" && Input.GetKeyDown(useKey) && !segurandoUmItem)
                 {
-                    /*itemSpawnado = Instantiate(bebidaMonstroPrefab);
-                    itemSpawnado.GetComponent<NetworkObject>().Spawn();*/
-
-                    //SpawnLocalIngredient(itemSpawnado);
-
                     segurandoUmItem = true;
                     BebidaSpawnerServerRpc();
                 }
                 if (hit.collider.gameObject.name == "CaixaRepolho" && Input.GetKeyDown(useKey) && !segurandoUmItem)
                 {
-                    /*itemSpawnado = Instantiate(saladaMonstroPrefab);
-                    itemSpawnado.GetComponent<NetworkObject>().Spawn();*/
-
-                    //SpawnLocalIngredient(itemSpawnado);
-
                     segurandoUmItem = true;
                     RepolhoSpawnerServerRpc();
                 }
@@ -122,13 +135,6 @@ public class PlayerController : NetworkBehaviour
             }
         }
         Debug.DrawRay(transform.position, transform.forward * maxDistance, Color.red);
-    }
-
-    void SpawnLocalIngredient(Transform itemPraSpawnar)
-    {
-        //Instantiate(itemPraSpawnar);
-        //objetoNetwork = itemPraSpawnar.GetComponent<NetworkObject>();
-        //objetoNetwork.Spawn();
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -152,7 +158,6 @@ public class PlayerController : NetworkBehaviour
             new Vector3(placeToSpawnItem.transform.position.x, placeToSpawnItem.transform.position.y, placeToSpawnItem.transform.position.z),
             Quaternion.identity
             );
-        //itemSpawnado.SetParent(placeToSpawnItem, false);
         itemSpawnado.GetComponent<NetworkObject>().Spawn();
     }
 
@@ -167,47 +172,53 @@ public class PlayerController : NetworkBehaviour
             );
         itemSpawnado.GetComponent<NetworkObject>().Spawn();
     }
-
-
-    public void AnimationTest()
-    {
-        //if (Input.GetKey(KeyCode.Y))
-        //{
-        //    playerAnimator.SetBool("Carregando", true);
-        //}
-        //else
-        //{
-        //    playerAnimator.SetBool("Carregando", false);
-        //}
-        //if (Input.GetKey(KeyCode.U))
-        //{
-        //    playerAnimator.SetBool("Andando", true);
-        //}
-        //else
-        //{
-        //    playerAnimator.SetBool("Andando", false);
-        //}
-        //if (Input.GetKey(KeyCode.I))
-        //{
-        //    playerAnimator.SetBool("Interagindo", true);
-        //}
-        //else
-        //{
-        //    playerAnimator.SetBool("Interagindo", false);
-        //}
-    }
-
     public void ForceInteraction()
     {
-        if (Input.GetKeyDown(KeyCode.C) && segurandoUmItem)
+        if (Physics.Raycast(playerVision, out RaycastHit hit, maxDistance, processingStation, QueryTriggerInteraction.Collide) && segurandoUmItem && Input.GetKeyDown(useKey))
         {
+            radio.PlayOneShot(maquinaDeSuco);
             ProcessarServerRpc();
         }
-        if (Input.GetKeyDown(KeyCode.B) && segurandoUmItem)
+        if (Physics.Raycast(playerVision, out RaycastHit hit2, maxDistance, tabuaDeCortar, QueryTriggerInteraction.Collide) && segurandoUmItem && Input.GetKeyDown(useKey))
         {
+            radio.PlayOneShot(tabua);
+            ProcessarServerRpc();
+        }
+        if (Physics.Raycast(playerVision, out RaycastHit hit3, maxDistance, CookPot, QueryTriggerInteraction.Collide) && segurandoUmItem && Input.GetKeyDown(useKey))
+        {
+            radio.PlayOneShot(panela);
             CozinharServerRpc();
         }
+        if (Physics.Raycast(playerVision, out RaycastHit hit4, maxDistance, lixeira, QueryTriggerInteraction.Collide) && segurandoUmItem && Input.GetKeyDown(useKey))
+        {
+            radio.PlayOneShot(lataDeLixo);
+            DespawnServerRpc();
+            ParaDeCarregar();
+        }
 
+        if (podeEntregar && Input.GetKeyDown(useKey))
+        {
+            VerificarItemServerRpc();
+            ParaDeCarregar();
+        }
+        
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name + " foi colidido PELO PLAYER");
+        if (other.gameObject.name == "FazedorDePedidos")
+        {
+            DeusExMachina = other.gameObject.GetComponent<FazedorDePedidos>();
+            podeEntregar = true;
+        }
+       
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "FazedorDePedidos")
+        {
+            podeEntregar = false;
+        }
     }
 
     [ServerRpc]
@@ -232,5 +243,28 @@ public class PlayerController : NetworkBehaviour
     void CozinharClientRpc()
     {
         GetComponentInChildren<FoodProcessing>().AtualizarObjetoParaCozido();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void DespawnServerRpc()
+    {
+        if (IsServer)
+        {
+            Destroy(itemSpawnado.GetComponent<NetworkObject>());
+            itemSpawnado.GetComponent<NetworkObject>().Despawn();
+        }
+    }
+
+    public void ParaDeCarregar() 
+    {
+        segurandoUmItem = false;
+        playerAnimator.SetBool("Carregando", false);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void VerificarItemServerRpc()
+    {
+        if (IsServer)
+        DeusExMachina.VerificarPedidoSeguradoPeloPlayer();
     }
 }

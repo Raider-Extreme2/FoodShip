@@ -11,5 +11,9 @@ public class NpcIrEmbora : StateMachineBehaviour
     {
         NpcController = animator.GetComponent<NpcController>();
         
+        //3
+        NpcController.WaypointSelector();
+        NpcController.UpdateDestination();
+        //3
     }
 }

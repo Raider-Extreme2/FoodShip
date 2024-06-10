@@ -1,0 +1,941 @@
+fileFormatVersion: 2
+guid: d2d40a20cbac4e040a1c8f647f8bc837
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 255
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bd9d26d87df4b4283396a5b0d01248
+      internalID: 678142807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 255
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7d852d36b71334c89ca317699622e6
+      internalID: 1458504331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 255
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b179cac15ff4cbd4a94960be3f11475e
+      internalID: -1640083285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 255
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7629e28012c407a4980ed394b421cbb4
+      internalID: 506249812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 255
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec6b21d76b5ac4489c64113dc5f04a2
+      internalID: -737372567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 255
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4db8df4f3f8db943ba729eaab6b9db9
+      internalID: -265022732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_6
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 255
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c212ff6afa6a0498f41f6a1c03de08
+      internalID: -1978919220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 255
+        width: 35
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d5f154c333a2246ad2dcc03a8593ec
+      internalID: 1297214736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_8
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 255
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17e52816bc8c7a4fa743a73e00cb05f
+      internalID: 1811120753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_9
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 255
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a396a9e8f1faa4b878590aa6040b62
+      internalID: 613147169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 183
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12930fd8ddd4d9341ba7077282f6b881
+      internalID: -747662299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 183
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c31471288f3e5240a89d91c4734cae8
+      internalID: -1280581467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_12
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 183
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dd9b548647b9b4c9dbc9b5b9fc19d6
+      internalID: 1668702549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_13
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 183
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db52b1d7420fca49a6749500e29e777
+      internalID: 1965552698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 183
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8428a2ff2929cfa44b1eadfec5e8b5db
+      internalID: 1166540754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_15
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 183
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f64a384b1358ec47b4a3db4e0366cb5
+      internalID: -107367755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_16
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 183
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e1da5d467ed634ea25f3daa38aae2c
+      internalID: 1564354220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_17
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 183
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9812bd4abe8bf24a831fbd07d4574db
+      internalID: 229206803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_18
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 183
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cffb5bc33ed6b479c861e1c3287299
+      internalID: -601037817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_19
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 183
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea94aceaba1a7964c985759311f9a47e
+      internalID: -1589304304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 111
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26f7727033868746ad683f78e86baa5
+      internalID: 1390742298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_21
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 111
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7def8847e05e1b347add9cdff4c9efab
+      internalID: 2035849217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_22
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 111
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b02844112548b438a3e347aa88dd14
+      internalID: 1603072059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_23
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 111
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408576fa2ddeced4fac9a5821ec77bf2
+      internalID: 1554636908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_24
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 112
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd7eff6989d1134fa8bc4ab49971d25
+      internalID: -787252883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_25
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 112
+        width: 53
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b819c1500a2d5364bbf88ee9bcf0b1d5
+      internalID: 1129554611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_26
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 111
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108608c47c145c148aba2d29d0d471d5
+      internalID: -1150374801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_27
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 111
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9d5861acc9f5e4b824c0b944be345c
+      internalID: 1124739463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_28
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 111
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f43f041a487a846b8e8c1778889b17
+      internalID: 685206025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_29
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 111
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52bee845daa97344989a5a695f26ae9
+      internalID: 235678628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_30
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 40
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca77adc393590c45aeb8793abafe8f7
+      internalID: -1959775669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 39
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed8cce9820f88b418e5b9149968cbbf
+      internalID: 163980720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 40
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1686cada151e8e04e98de9aac648f5f8
+      internalID: 700419590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_33
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 39
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fc6cd28dab782498dad72beefd6203
+      internalID: -1392535284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_34
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 40
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b32d1526aaf434489cff10d300b21d
+      internalID: 573397926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_35
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 40
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef7c298a303bc9498fa6cbebd8581b6
+      internalID: 74936942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-transparent-golden-balloon-font-alphabet_36
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 40
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e4ba19850b2e14b9d17810b3807daf
+      internalID: 1592518929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5007354785c354c4e91db71981ea6660
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      png-transparent-golden-balloon-font-alphabet_0: 678142807
+      png-transparent-golden-balloon-font-alphabet_1: 1458504331
+      png-transparent-golden-balloon-font-alphabet_10: -747662299
+      png-transparent-golden-balloon-font-alphabet_11: -1280581467
+      png-transparent-golden-balloon-font-alphabet_12: 1668702549
+      png-transparent-golden-balloon-font-alphabet_13: 1965552698
+      png-transparent-golden-balloon-font-alphabet_14: 1166540754
+      png-transparent-golden-balloon-font-alphabet_15: -107367755
+      png-transparent-golden-balloon-font-alphabet_16: 1564354220
+      png-transparent-golden-balloon-font-alphabet_17: 229206803
+      png-transparent-golden-balloon-font-alphabet_18: -601037817
+      png-transparent-golden-balloon-font-alphabet_19: -1589304304
+      png-transparent-golden-balloon-font-alphabet_2: -1640083285
+      png-transparent-golden-balloon-font-alphabet_20: 1390742298
+      png-transparent-golden-balloon-font-alphabet_21: 2035849217
+      png-transparent-golden-balloon-font-alphabet_22: 1603072059
+      png-transparent-golden-balloon-font-alphabet_23: 1554636908
+      png-transparent-golden-balloon-font-alphabet_24: -787252883
+      png-transparent-golden-balloon-font-alphabet_25: 1129554611
+      png-transparent-golden-balloon-font-alphabet_26: -1150374801
+      png-transparent-golden-balloon-font-alphabet_27: 1124739463
+      png-transparent-golden-balloon-font-alphabet_28: 685206025
+      png-transparent-golden-balloon-font-alphabet_29: 235678628
+      png-transparent-golden-balloon-font-alphabet_3: 506249812
+      png-transparent-golden-balloon-font-alphabet_30: -1959775669
+      png-transparent-golden-balloon-font-alphabet_31: 163980720
+      png-transparent-golden-balloon-font-alphabet_32: 700419590
+      png-transparent-golden-balloon-font-alphabet_33: -1392535284
+      png-transparent-golden-balloon-font-alphabet_34: 573397926
+      png-transparent-golden-balloon-font-alphabet_35: 74936942
+      png-transparent-golden-balloon-font-alphabet_36: 1592518929
+      png-transparent-golden-balloon-font-alphabet_4: -737372567
+      png-transparent-golden-balloon-font-alphabet_5: -265022732
+      png-transparent-golden-balloon-font-alphabet_6: -1978919220
+      png-transparent-golden-balloon-font-alphabet_7: 1297214736
+      png-transparent-golden-balloon-font-alphabet_8: 1811120753
+      png-transparent-golden-balloon-font-alphabet_9: 613147169
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

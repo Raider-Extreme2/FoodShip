@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cliente
+  - 1
+  - 2
+  - 3
   layers:
   - Default
   - TransparentFX
@@ -14,11 +18,11 @@ TagManager:
   - ' CaixaIngredientes'
   - FoodStation
   - PlayerLayerMask
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ProcessingStation
+  - CookPot
+  - Lixeira
+  - entregas
+  - TabuaDeItens
   - 
   - 
   - 

@@ -5,32 +5,28 @@ using UnityEngine;
 public class NpcSoQuePuto : StateMachineBehaviour
 {
     NpcController NpcController;
-    float tempoDeEspera;
+    [Header("SoundEffect")]
+    public AudioClip npcIrritado;
+    public AudioClip npcPedindo;
+    public AudioSource tocadorDeSon;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         NpcController = animator.GetComponent<NpcController>();
-        //NpcController.estadoAtual.text = "To Puto";
+        tocadorDeSon = animator.GetComponent<NpcController>().gameObject.GetComponent<AudioSource>();
+        
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if (NpcController.estados == 4)
-        {
-            animator.SetBool("PedidoEntregue", true);
-        }
-        //tempoDeEspera += Time.deltaTime;
-        if (tempoDeEspera >= 10)
-        {
-            animator.SetBool("DesistirDoPedido", true);
-        }
-    }
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        tocadorDeSon.clip = npcIrritado;
+        tocadorDeSon.Play();
+        //2
+        //NpcController.index = 2;
         NpcController.UpdateDestination();
         NpcController.WaypointSelector();
+        //3
     }
 }

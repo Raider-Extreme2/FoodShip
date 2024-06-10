@@ -37,7 +37,7 @@ public class FoodProcessing : NetworkBehaviour
                 playerToParent = hit.collider.GetComponent<NetworkObject>().gameObject;
                 transform.position = new Vector3(0, 1.5f, 0.4f);
                 transform.SetParent(playerToParent.transform, false);
-                Debug.Log(hit.transform.gameObject.name);
+                //Debug.Log(hit.transform.gameObject.name);
             }
         }
 

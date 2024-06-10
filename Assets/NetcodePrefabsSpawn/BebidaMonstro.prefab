@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7120609013329709474}
   m_Layer: 0
   m_Name: BebidaMonstro
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
